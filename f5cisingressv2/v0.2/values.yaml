@@ -25,6 +25,8 @@ ingress:
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
+    virtual-server.f5.com/port: 80
+    virtual-server.f5.com/ip: 172.16.1.100
   hosts:
     - host: chart-example.local
       paths:
