@@ -5,32 +5,32 @@ labels:
   io.cattle.role: project
   io.rancher.certified: partner
 questions:
-- variable: ingress.annotations.virtualserverip
+- variable: ingress.annotations.virtual-server.f5.com/ip
   default: "controller-default"
   description: "Provide F5 Virtual Server IP for Load Balancing"
   type: string
   label: Config F5 Virual Server IP
   group: "F5 Virtual Server"
-- variable: ingress.annotations.virtualserverhttpport
+- variable: ingress.annotations.virtual-server.f5.com/http-port
   default: "80"
   description: "Provide F5 Virtual Server Port for Load Balancing"
   type: string
   label: Config F5 Virual Server Port
   group: "F5 Virtual Server"
-- variable: ingress.annotations.partition
+- variable: ingress.annotations.virtual-server.f5.com/partition
   default: "k8s"
   description: "Provide F5 Partition for the Config"
   type: string
   label: Config F5 Partition to use
   group: "F5 Virtual Server"
-- variable: ingress.annotations.health
-  default: ""
+- variable: ingress.annotations.virtual-server.f5.com/health
+  default: "controller-default"
   description: "Provide F5 VS Health check for Pool"
   type: string
   label: Config F5 Virual Server Health
   group: "F5 Virtual Server"
-- variable: ingress.annotations.balance
-  default: "round-robin"
+- variable: ingress.annotations.virtual-server.f5.com/balance
+  default: ""
   description: "F5 Virtual Server Balance Type"
   type: enum
   required: true
@@ -39,13 +39,13 @@ questions:
   - "round-robin"
   - "least-connections-node"
   - "fastest-node"
-- variable: ingress.annotations.hosts[0].host
+- variable: ingress.annotations.hosts.host
   default: "xio.io"
   description: "Provide Ingress Host Domain Name"
   type: string
   label: Config Ingress Host
   group: "Ingress Basic Config"
-- variable: ingress.annotations.hosts[0].paths.path
+- variable: ingress.annotations.hosts.paths.path
   default: "/"
   description: "Provide Ingress Path"
   type: string
