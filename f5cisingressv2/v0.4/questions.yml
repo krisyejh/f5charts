@@ -74,7 +74,7 @@ questions:
 - variable: service.serviceName
   default: ""
   description: "Provide Ingress Service name to configure with"
-  type: string
+  type: service
   label: Config Ingress Service
   group: "Ingress Basic Config"
 - variable: service.port
