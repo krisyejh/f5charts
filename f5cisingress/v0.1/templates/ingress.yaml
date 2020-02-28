@@ -1,5 +1,5 @@
 {{- if .Values.ingress.enabled -}}
-{{- $ingressName := include "F5CISIngress.ingressname" . -}}
+{{- $ingressName := include "f5cisingress.ingressname" . -}}
 {{- $serviceName := .Values.service.serviceName -}}
 {{- $svcPort := .Values.service.port -}}
 {{- if semverCompare ">=1.14-0" .Capabilities.KubeVersion.GitVersion -}}
@@ -11,7 +11,7 @@ kind: Ingress
 metadata:
   name: {{ $ingressName }}
   labels:
-    {{- include "F5CISIngress.labels" . | nindent 4 }}
+    {{- include "f5cisingress.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
