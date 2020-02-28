@@ -56,7 +56,7 @@ Create chart name and version as used by the chart label.
 {{/*
 Common labels
 */}}
-{{- define "f5cisngressv2.labels" -}}
+{{- define "f5cisingressv2.labels" -}}
 helm.sh/chart: {{ include "f5cisingressv2.chart" . }}
 {{ include "f5cisingressv2.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
@@ -68,7 +68,7 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "f5cisngressv2.selectorLabels" -}}
+{{- define "f5cisingressv2.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "f5cisingressv2.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
