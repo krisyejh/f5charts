@@ -82,4 +82,4 @@ questions:
   description: "Provide Ingress Service Port to configure with"
   type: string
   label: Config Ingress Service Port
-  group: "Ingress Basic Config
+  group: "Ingress Basic Config"
