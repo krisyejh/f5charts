@@ -70,7 +70,7 @@ questions:
   type: string
   label: Config Ingress SSL Host
   show_if: "ingress.tlsenabled=true"
-  group: "Ingress Basic Config
+  group: "Ingress Basic Config"
 - variable: service.serviceName
   default: ""
   description: "Provide Ingress Service name to configure with"
