@@ -2,7 +2,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "f5cisngressv2.name" -}}
+{{- define "f5cisingressv2.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
@@ -30,7 +30,7 @@ Create a default fully qualified ingress name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a ingress name.
 */}}
-{{- define "f5cisngressv2.ingressname" -}}
+{{- define "f5cisingressv2.ingressname" -}}
 {{- if .Values.ingressnameOverride -}}
 {{- .Values.ingressnameOverride | trunc 63 | trimSuffix "-" -}}
 {{- else -}}
