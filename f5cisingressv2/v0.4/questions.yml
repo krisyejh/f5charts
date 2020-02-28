@@ -39,13 +39,13 @@ questions:
   - "round-robin"
   - "least-connections-node"
   - "fastest-node"
-- variable: ingress.annotations.hosts[0].host
+- variable: ingress.annotations.hosts.host
   default: "xio.io"
   description: "Provide Ingress Host Domain Name"
   type: string
   label: Config Ingress Host
   group: "Ingress Basic Config"
-- variable: ingress.annotations.hosts[0].paths.path
+- variable: ingress.annotations.hosts.paths.path
   default: "/"
   description: "Provide Ingress Path"
   type: string
