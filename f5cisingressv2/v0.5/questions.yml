@@ -37,6 +37,7 @@ questions:
   description: "F5 Virtual Server Balance Type"
   type: enum
   required: true
+  label: F5 VS Balance 
   group: "F5 Virtual Server"
   options:
   - "round-robin"
